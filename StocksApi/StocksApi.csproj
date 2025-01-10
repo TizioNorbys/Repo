@@ -1,0 +1,77 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>3a558e6f-34a8-407d-8d60-7baf841ce622</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="FluentResults" Version="3.16.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.11" />
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Stocks\" />
+    <None Remove="Controllers\" />
+    <None Remove="Errors\" />
+    <None Remove="Extensions\" />
+    <None Remove="RealTime\" />
+    <None Remove="Persistence\" />
+    <None Remove="Persistence\Entities\" />
+    <None Remove="Persistence\EntitiesConfiguration\" />
+    <None Remove="Authentication\" />
+    <None Remove="Abstractions\" />
+    <None Remove="OptionsSetup\" />
+    <None Remove="IO\" />
+    <None Remove="IO\Requests\" />
+    <None Remove="RealTime\SignalR\" />
+    <None Remove="Persistence\ValueConverters\" />
+    <None Remove="Persistence\Repositories\" />
+    <None Remove="Persistence\Repositories\Base\" />
+    <None Remove="IO\Requests\Account\" />
+    <None Remove="IO\Requests\Stock\" />
+    <None Remove="Validators\" />
+    <None Remove="Serialization\" />
+    <None Remove="DTOs\" />
+    <None Remove="ErrorHandling\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Stocks\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Errors\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="RealTime\" />
+    <Folder Include="Persistence\" />
+    <Folder Include="Persistence\Entities\" />
+    <Folder Include="Persistence\EntitiesConfiguration\" />
+    <Folder Include="Authentication\" />
+    <Folder Include="Abstractions\" />
+    <Folder Include="OptionsSetup\" />
+    <Folder Include="IO\" />
+    <Folder Include="IO\Requests\" />
+    <Folder Include="RealTime\SignalR\" />
+    <Folder Include="Persistence\ValueConverters\" />
+    <Folder Include="Persistence\Repositories\" />
+    <Folder Include="Persistence\Repositories\Base\" />
+    <Folder Include="IO\Requests\Account\" />
+    <Folder Include="IO\Requests\Stock\" />
+    <Folder Include="Validators\" />
+    <Folder Include="Serialization\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="ErrorHandling\" />
+  </ItemGroup>
+</Project>
